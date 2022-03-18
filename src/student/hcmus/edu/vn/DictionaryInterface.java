@@ -5,17 +5,17 @@ import java.util.Set;
 
 public interface DictionaryInterface {
 
-    public boolean isEmpty();
+    boolean isEmpty();
 
-    public int size();
+    int size();
 
-    public Set<Map.Entry<String, String>> lookup(String key);
+    Set<Map.Entry<String, String>> lookup(String key);
 
-    public void insert(String key, String value) throws DuplicateKeyException;
+    void insert(String key, String value) throws DuplicateKeyException;
 
-    public void delete(String key) throws KeyNotFoundException;
+    void delete(String key) throws KeyNotFoundException;
 
-    public void makeEmpty();
+    void makeEmpty();
 
-    public String toString();
+    String toString();
 }
