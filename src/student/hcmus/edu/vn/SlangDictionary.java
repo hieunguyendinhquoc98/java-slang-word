@@ -55,38 +55,6 @@ public class SlangDictionary implements DictionaryInterface {
     }
 
     public void loadData() {
-//        String fileName = ENGLISH_STORAGE;
-//        if (LANGUAGE == VI) fileName = VI_STORAGE;
-//
-//        File file = new File(fileName);
-//        if (!file.exists()){
-//            System.out.println("File not found");
-//            return;
-//        }
-//        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-//        try {
-//            DocumentBuilder builder = factory.newDocumentBuilder();
-//            Document document = builder.parse(file);
-//            Element documentElement = document.getDocumentElement();
-//            NodeList sList = documentElement.getElementsByTagName("record");
-//
-//            if (sList != null && sList.getLength() > 0) {
-//                for (int i = 0; i < sList.getLength(); i++) {
-//                    Node node = sList.item(i);
-//                    if (node.getNodeType() == Node.ELEMENT_NODE) {
-//                        Element e = (Element) node;
-//                        NodeList nodeList = e.getElementsByTagName("word");
-//                        e.getAttributeNodeNS("", "UTF-8");
-//                        String word = nodeList.item(0).getTextContent();
-//                        nodeList = e.getElementsByTagName("meaning");
-//                        String meaning = nodeList.item(0).getTextContent();
-//                        m_Dictionary.put(word, meaning);
-//                    }
-//                }
-//            }
-//        } catch (Exception e) {
-//            System.out.println("Get an exception in read database " + e.getMessage());
-//        }
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser saxParser = factory.newSAXParser();
